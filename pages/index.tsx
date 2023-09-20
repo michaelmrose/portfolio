@@ -4,6 +4,9 @@ import Show from "../components/Show";
 import Card from "../components/Card";
 import Head from "next/head";
 import Spotlight from "@/utilities/spotlight";
+import styled, { css } from 'styled-components'
+
+
 
 export default function Home() {
 useEffect(() => {
@@ -20,16 +23,17 @@ useEffect(() => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Show />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Show title="A title" subtitle="test"/>
+        <Card 
+            heading="A totally real heading" 
+            description="A totally real description."
+            linkText="Learn a lot more"
+            linkTarget="/read"/>
+        <Card 
+            heading="A totally real heading" 
+            description="A totally real description."
+            linkText="Learn a lot more"
+            linkTarget="/read"/>
       </main>
     </>
   );

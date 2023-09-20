@@ -1,5 +1,11 @@
 import Link from "next/link";
-const Card = function Card() {
+interface cardData {
+  heading: string
+  description: string
+  linkText: string
+  linkTarget: string
+}
+const Card = function Card({heading, description, linkText, linkTarget}:cardData) {
   return (
     <div className="mt-5 w-10/12 mx-auto   rounded-lg shadow">
       <div
@@ -9,19 +15,17 @@ const Card = function Card() {
         aria-labelledby="about-tab"
       >
         <h2 className="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-          How to test the Internet Speed In Ubuntu And Raspberry Pi 4 With CLI
-          Tool?
+          {heading}
         </h2>
 
         <p className="mb-3 text-gray-500 dark:text-gray-400">
-          Lorem excepteur dolore ex veniam ad velit officia enim velit consequat
-          consequat nulla eiusmod.
+          {description}
         </p>
         <Link
-          href="/read"
+          href={linkTarget}
           className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
         >
-          Learn more
+          {linkText}
           <svg
             className="w-6 h-6 ml-1"
             fill="currentColor"
