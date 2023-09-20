@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import Show from "../components/Show";
 import Card from "../components/Card";
 import Head from "next/head";
+import Spotlight from "@/utilities/spotlight";
 
 export default function Home() {
+useEffect(() => {
+    if (typeof window !== "undefined") {
+      new Spotlight({});
+    }
+  }, []);
   return (
     <>
       <Head>
