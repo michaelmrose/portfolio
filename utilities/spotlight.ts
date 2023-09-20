@@ -12,11 +12,12 @@ class Spotlight {
   innerRadius: number;
   outerRadius: number;
   outerColor: string;
-  boundEventListener: (event: MouseEvent) => void;
+  boundMouseEventListener: (event: MouseEvent) => void;
+  boundTouchMoveListener: (event: TouchEvent) => void;
 
   constructor({
     toggleEl,
-    outerColor = "#00000011",
+    outerColor = "#00000033",
     innerRadius = 10,
     outerRadius = 350
   }: SpotlightOptions) {
@@ -25,8 +26,13 @@ class Spotlight {
     this.innerRadius = innerRadius;
     this.outerRadius = outerRadius;
 
-    this.boundEventListener = this.handleMouseMove.bind(this);
+    // Bind mouse move handler
+    this.boundMouseEventListener = this.handleMouseMove.bind(this);
 
+    // Bind touch move handler
+    this.boundTouchMoveListener = this.handleTouchMove.bind(this);
+
+    // Initialize the spotlight
     this.switchOn();
 
     if (toggleEl) {
@@ -39,7 +45,9 @@ class Spotlight {
   switchOn() {
     this.active = true;
 
-    document.addEventListener("mousemove", this.boundEventListener);
+    // Attach mouse move and touch move events
+    document.addEventListener("mousemove", this.boundMouseEventListener);
+    document.addEventListener("touchmove", this.boundTouchMoveListener);
 
     this.el.style.animation = "enter 1s ease forwards";
 
@@ -52,9 +60,11 @@ class Spotlight {
   switchOff() {
     this.active = false;
 
-    this.el.style.animation = "exit 1s ease forwards";
+    // Detach mouse move and touch move events
+    document.removeEventListener("mousemove", this.boundMouseEventListener);
+    document.removeEventListener("touchmove", this.boundTouchMoveListener);
 
-    document.removeEventListener("mousemove", this.boundEventListener);
+    this.el.style.animation = "exit 1s ease forwards";
   }
 
   toggleLight() {
@@ -74,9 +84,12 @@ class Spotlight {
   }
 
   handleMouseMove(event: MouseEvent) {
-    setTimeout(() => {
-      this.updateEl(event.clientX, event.clientY);
-    }, 30);
+    this.updateEl(event.clientX, event.clientY);
+  }
+
+  handleTouchMove(event: TouchEvent) {
+    const touch = event.touches[0];
+    this.updateEl(touch.clientX, touch.clientY);
   }
 
   updateEl(x: number, y: number) {
