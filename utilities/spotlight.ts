@@ -78,6 +78,7 @@ class Spotlight {
   insertSpotlightElement() {
     const el = document.createElement("div");
     el.classList.add("spotlight");
+        el.style.background = 'transparent';  // Set initial background to transparent
     document.body.appendChild(el);
 
     return el;
