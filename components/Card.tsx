@@ -1,9 +1,9 @@
 import Link from "next/link";
 const Card = function Card() {
   return (
-    <div className="mt-5 w-10/12 mx-auto  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="mt-5 w-10/12 mx-auto   rounded-lg shadow">
       <div
-        className="p-3 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+        className="p-3  rounded-lg md:p-8"
         id="about"
         role="tabpanel"
         aria-labelledby="about-tab"

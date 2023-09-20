@@ -24,6 +24,12 @@ useEffect(() => {
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </main>
     </>
   );
