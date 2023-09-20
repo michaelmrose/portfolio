@@ -17,9 +17,9 @@ class Spotlight {
 
   constructor({
     toggleEl,
-    outerColor = "#00000033",
+    outerColor = " #00000011 ",
     innerRadius = 10,
-    outerRadius = 350
+    outerRadius = 300
   }: SpotlightOptions) {
     this.el = this.insertSpotlightElement();
     this.outerColor = outerColor;
