@@ -1,13 +1,19 @@
+import { ChildProcess } from "child_process";
 import Link from "next/link";
-interface cardData {
+import { ReactNode } from "react";
+interface CardData {
   heading: string
   description: string
   linkText: string
   linkTarget: string
+  children?: ReactNode
 }
-const Card = function Card({heading, description, linkText, linkTarget}:cardData) {
+
+
+const Card: React.FC<CardData> = ({ heading, description, linkText, linkTarget, children }) => {
   return (
     <div className="mt-5 w-10/12 mx-auto   rounded-lg shadow">
+
       <div
         className="p-3  rounded-lg md:p-8"
         id="about"
@@ -18,9 +24,12 @@ const Card = function Card({heading, description, linkText, linkTarget}:cardData
           {heading}
         </h2>
 
-        <p className="mb-3 text-gray-500 dark:text-gray-400">
+        <div className="mb-3 text-gray-500 dark:text-gray-400">
           {description}
-        </p>
+        </div>
+        <div>
+          {children || null}
+        </div>
         <Link
           href={linkTarget}
           className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"

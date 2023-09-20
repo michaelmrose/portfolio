@@ -8,8 +8,9 @@ import styled, { css } from 'styled-components'
 
 
 
+
 export default function Home() {
-useEffect(() => {
+  useEffect(() => {
     if (typeof window !== "undefined") {
       new Spotlight({});
     }
@@ -23,17 +24,28 @@ useEffect(() => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Show title="A title" subtitle="test"/>
-        <Card 
-            heading="A totally real heading" 
+        <Show title="A title" subtitle="test" />
+        <Card
+          heading="A totally real heading"
+          description="A totally real description."
+          linkText="Learn a lot more"
+          linkTarget="/read">
+
+          <Card
+            heading="A totally real heading"
             description="A totally real description."
-            linkText="Learn a lot more"
-            linkTarget="/read"/>
-        <Card 
-            heading="A totally real heading" 
-            description="A totally real description."
-            linkText="Learn a lot more"
-            linkTarget="/read"/>
+            linkText="Learn absolutely nothing"
+            linkTarget="/read">
+
+          </Card>
+
+        </Card>
+        <Card
+          heading="A totally real heading"
+          description="A totally real description."
+          linkText="Learn a lot more"
+          linkTarget="/read">
+        </Card>
       </main>
     </>
   );
