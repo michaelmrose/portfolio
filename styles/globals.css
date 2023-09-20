@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: #112340!important;
+}
 a {
   display: inline-block;
   position: relative;
