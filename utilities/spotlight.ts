@@ -15,7 +15,7 @@ class Spotlight {
   boundTouchMoveListener: (event: TouchEvent) => void;
 
   constructor({
-    outerColor = " #00000011 ",
+    outerColor = " #00000030 ",
     innerRadius = 10,
     outerRadius = 300
   }: SpotlightOptions) {
@@ -87,7 +87,7 @@ class Spotlight {
   }
 
   updateEl(x: number, y: number) {
-    this.el.style.background = `radial-gradient(circle at ${x}px ${y}px, #00000000 ${this.innerRadius}px, ${this.outerColor} ${this.outerRadius}px)`;
+    this.el.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 0, 0, 0) ${this.innerRadius}px, rgba(0, 0, 0, 0.01) ${(this.innerRadius + this.outerRadius) / 2}px, ${this.outerColor} ${this.outerRadius}px)`;
   }
 }
 
