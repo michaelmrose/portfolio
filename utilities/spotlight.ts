@@ -1,6 +1,5 @@
 //Credit  due to the fine work of David Lange https://blog.finiam.com/blog/spotlight-effect-with-js-and-css
 interface SpotlightOptions {
-  toggleEl: string;
   innerRadius?: number;
   outerRadius?: number;
   outerColor?: string;
@@ -16,7 +15,6 @@ class Spotlight {
   boundTouchMoveListener: (event: TouchEvent) => void;
 
   constructor({
-    toggleEl,
     outerColor = " #00000011 ",
     innerRadius = 10,
     outerRadius = 300
@@ -35,11 +33,6 @@ class Spotlight {
     // Initialize the spotlight
     this.switchOn();
 
-    if (toggleEl) {
-      document
-        .querySelector(toggleEl)
-        ?.addEventListener("click", this.toggleLight.bind(this));
-    }
   }
 
   switchOn() {
