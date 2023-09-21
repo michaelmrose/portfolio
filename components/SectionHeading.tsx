@@ -8,7 +8,7 @@ interface separatorData {
 
 const SeparatorDemo = ({title,subtitle}: separatorData) => (
   <div className="container mt-6 mx-auto p-3">
-    <h1 className="dark:text-white mt-4 text-black text-3xl font-medium">
+    <h1 className="dark:text-white mt-4 text-black text-lg font-medium">
       {title}
     </h1>
     <h2 className="dark:text-white  mt-4 text-grey-500 text-xl">

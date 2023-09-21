@@ -37,6 +37,7 @@ const Card: React.FC<CardData> = ({ heading, date,description, linkText, linkTar
         <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
           {description}
         </div>
+        {linkTarget ? 
         <Link
           href={linkTarget}
           className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
@@ -56,6 +57,7 @@ const Card: React.FC<CardData> = ({ heading, date,description, linkText, linkTar
             </path>
           </svg>
         </Link>
+: null}
       </div>
     </div>
   );
