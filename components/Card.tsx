@@ -15,7 +15,7 @@ interface CardData {
 
 const Card: React.FC<CardData> = ({ heading, date,description, linkText, linkTarget, children, tags, screenShot }) => {
   return (
-    <div className="mt-5 w-10/12 mx-auto   rounded-lg shadow">
+    <div className="mt-5 w-10/12 mx-auto   rounded-lg shadow hover:border-solid hover:border-2 hover:border-teal-300">
 
       <div
         className="p-3  rounded-lg md:p-8"
@@ -24,7 +24,7 @@ const Card: React.FC<CardData> = ({ heading, date,description, linkText, linkTar
         aria-labelledby="about-tab"
       >
 
-        <div className="mb-3 text-gray-500 dark:text-slate-500">
+        <div className="mb-3 text-gray-500 dark:text-slate-400">
           {date}
         </div>
         <h2 className="inline-flex items-baseline text-lg leading-tight text-slate-100 hover:text-teal-300 focus-visible:text-teal-300 ">
@@ -40,6 +40,7 @@ const Card: React.FC<CardData> = ({ heading, date,description, linkText, linkTar
         {linkTarget ? 
         <Link
           href={linkTarget}
+          target="_blank"
           className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
         >
           {linkText}
