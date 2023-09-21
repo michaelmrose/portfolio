@@ -38,7 +38,7 @@ const MenubarDemo = () => {
           </Menubar.Trigger>
         </Menubar.Menu>
 
-        <Menubar.Menu>
+        {/* <Menubar.Menu>
           <button
             className="ml-2 py-2 px-3 outline-none select-none font-medium leading-none rounded text-violet11 text-[13px] flex items-center justify-between gap-[2px] hover:bg-violet4"
             onClick={() => setTheme("dark")}
@@ -80,7 +80,7 @@ const MenubarDemo = () => {
               </path>
             </svg>
           </button>
-        </Menubar.Menu>
+        </Menubar.Menu> */}
       </Menubar.Root>
     </div>
   );

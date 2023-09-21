@@ -3,14 +3,17 @@ import Link from "next/link";
 import { ReactNode } from "react";
 interface CardData {
   heading: string
+  date: string
   description: string
   linkText: string
   linkTarget: string
+  tags?: [string]
+  screenShot?: string
   children?: ReactNode
 }
 
 
-const Card: React.FC<CardData> = ({ heading, description, linkText, linkTarget, children }) => {
+const Card: React.FC<CardData> = ({ heading, date,description, linkText, linkTarget, children, tags, screenShot }) => {
   return (
     <div className="mt-5 w-10/12 mx-auto   rounded-lg shadow">
 
@@ -20,15 +23,19 @@ const Card: React.FC<CardData> = ({ heading, description, linkText, linkTarget, 
         role="tabpanel"
         aria-labelledby="about-tab"
       >
-        <h2 className="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+
+        <div className="mb-3 text-gray-500 dark:text-slate-500">
+          {date}
+        </div>
+        <h2 className="inline-flex items-baseline text-lg leading-tight text-slate-100 hover:text-teal-300 focus-visible:text-teal-300 ">
           {heading}
         </h2>
 
-        <div className="mb-3 text-gray-500 dark:text-gray-400">
-          {description}
-        </div>
         <div>
           {children || null}
+        </div>
+        <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
+          {description}
         </div>
         <Link
           href={linkTarget}

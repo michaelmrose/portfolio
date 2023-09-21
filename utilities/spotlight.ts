@@ -15,7 +15,7 @@ class Spotlight {
   boundTouchMoveListener: (event: TouchEvent) => void;
 
   constructor({
-    outerColor = " #00000030 ",
+    outerColor = " #00000011 ",
     innerRadius = 10,
     outerRadius = 300
   }: SpotlightOptions) {
