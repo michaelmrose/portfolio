@@ -1,15 +1,5 @@
-import { useEffect } from "react";
-import Spotlight from "@/utilities/spotlight";
 const Contact = () => {
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            var light =new Spotlight({});
-        }
-        return () => {
-        light?.destroy();
-    }
-    }, []);
   return (
     <div className="format dark:format-invert mt-4 mx-auto">
       <h1>Contact us</h1>

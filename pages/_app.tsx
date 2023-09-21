@@ -1,8 +1,20 @@
+import { useEffect } from "react";
+import Spotlight from "@/utilities/spotlight";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import Header from "../components/Header";
 export default function App({ Component, pageProps }: AppProps) {
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            var light =new Spotlight({});
+        }
+        return () => {
+        light?.destroy();
+    }
+    }, []);
+
   return (
     <ThemeProvider
       disableTransitionOnChange

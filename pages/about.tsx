@@ -1,15 +1,5 @@
-import { useEffect } from "react";
-import Spotlight from "@/utilities/spotlight";
 const Page = () => {
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            var light =new Spotlight({});
-        }
-        return () => {
-        light?.destroy();
-    }
-    }, []);
   return <article className="format dark:format-invert mt-4 mx-auto">
     <h1>About us</h1>
     <p className="lead">Lorem excepteur dolore ex veniam ad velit officia enim velit consequat consequat nulla eiusmod</p>

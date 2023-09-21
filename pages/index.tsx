@@ -1,20 +1,9 @@
-import { useEffect } from "react";
 import Head from "next/head";
 import styled, { css } from 'styled-components';
 import SectionHeading from "../components/SectionHeading";
 import Card from "../components/Card";
-import Spotlight from "@/utilities/spotlight";
 
 export default function Home() {
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            var light =new Spotlight({});
-        }
-        return () => {
-        light?.destroy();
-    }
-    }, []);
-
     return (
         <>
             <Head>
