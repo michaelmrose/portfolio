@@ -69,6 +69,10 @@ class Spotlight {
 
     this.el.style.animation = "exit 1s ease forwards";
   }
+  destroy(){
+    this.switchOff()
+    this.el.remove()
+  }
 
   toggleLight() {
     if (this.active) {

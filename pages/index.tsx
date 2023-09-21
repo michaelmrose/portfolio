@@ -8,8 +8,11 @@ import Spotlight from "@/utilities/spotlight";
 export default function Home() {
     useEffect(() => {
         if (typeof window !== "undefined") {
-            new Spotlight({});
+            var light =new Spotlight({});
         }
+        return () => {
+        light?.destroy();
+    }
     }, []);
 
     return (
