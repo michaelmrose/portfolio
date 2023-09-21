@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
-import Show from "../components/Show";
+import SectionHeading from "../components/SectionHeading";
 import Card from "../components/Card";
 import Head from "next/head";
 import Spotlight from "@/utilities/spotlight";
@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Show title="Projects" subtitle="" />
+        <SectionHeading title="Projects" subtitle="" />
         <Card
           heading="RA Journal"
           date="2023"
@@ -66,7 +66,7 @@ export default function Home() {
           linkTarget="/read">
         </Card>
 
-        <Show title="Professional Experience" subtitle="" />
+        <SectionHeading title="Professional Experience" subtitle="" />
 
         <Card
           heading="General Assembly"
