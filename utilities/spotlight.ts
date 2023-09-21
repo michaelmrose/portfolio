@@ -5,6 +5,16 @@ interface SpotlightOptions {
   outerColor?: string;
 }
 
+function isMobile(){
+return 'ontouchstart' in window;
+}
+function getOpacity(){
+  if (isMobile())
+    return "#00000014"
+  else
+  return "#00000011"
+  
+}
 class Spotlight {
   active = true;
   el: HTMLElement;
@@ -15,7 +25,7 @@ class Spotlight {
   boundTouchMoveListener: (event: TouchEvent) => void;
 
   constructor({
-    outerColor = " #00000011 ",
+    outerColor = getOpacity(),
     innerRadius = 10,
     outerRadius = 300
   }: SpotlightOptions) {
