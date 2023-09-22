@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-body {
-    background-color: #112340!important;
-    font-family: 'Inter', sans-serif;
-}
 a {
   display: inline-block;
   position: relative;
@@ -56,7 +52,7 @@ a {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #000000ee;
+  background: #00000011;
   pointer-events: none;
 }
 .sectionHeading {
