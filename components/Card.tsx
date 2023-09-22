@@ -15,7 +15,7 @@ interface CardData {
 
 const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTarget, children, tags, screenShot }) => {
   return (
-    <div className="bg-transparent hover:bg-blue4  mt-5 w-10/12 mx-[100px]  rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300">
+    <div className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300">
 
       <div
         className="p-3  rounded-lg md:p-8"
@@ -59,7 +59,8 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
             </svg>
           </Link>
           }
-        <div className="flex  flex-wrap gap-2 place-items-stretch place-content-center w-[500px]">
+        {/* <div className="flex  flex-wrap gap-2 place-items-stretch place-content-center w-[500px]"> */}
+        <div className="flex  flex-wrap gap-2 place-items-stretch place-content-center">
           {tags?.map((tag, idx) => (
             <span
               // className="bg-teal-500 rounded-md p-2"
