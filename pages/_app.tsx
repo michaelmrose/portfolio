@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       defaultTheme="system"
     >
       <Header />
-      <div className="bg-blue-600 h-1 w-full text-3xl font-bold underline">
+      <div className="bg-blue1 h-1 w-full text-3xl font-bold underline ">
       </div>
       <Component {...pageProps} />
     </ThemeProvider>

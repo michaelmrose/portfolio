@@ -15,7 +15,7 @@ interface CardData {
 
 const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTarget, children, tags, screenShot }) => {
   return (
-    <div className="bg-transparent hover:bg-blue2  mt-5 w-10/12 mx-[100px]  rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300">
+    <div className="bg-transparent hover:bg-blue4  mt-5 w-10/12 mx-[100px]  rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300">
 
       <div
         className="p-3  rounded-lg md:p-8"
@@ -41,7 +41,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
           <Link
             href={linkTarget}
             target="_blank"
-            className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
+            className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700 my-3"
           >
             {linkText}
             <svg
