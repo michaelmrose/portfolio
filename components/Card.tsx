@@ -37,7 +37,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
         <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
           {description}
         </div>
-        {linkTarget ?
+        {linkTarget &&
           <Link
             href={linkTarget}
             target="_blank"
@@ -58,7 +58,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
               </path>
             </svg>
           </Link>
-          : null}
+          }
         <div className="flex  flex-wrap gap-2 place-items-stretch place-content-center w-[500px]">
           {tags?.map((tag, idx) => (
             <span
