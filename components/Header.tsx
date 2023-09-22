@@ -14,10 +14,10 @@ const MenubarDemo = () => {
 
       <Menubar.Root className="hidden sm:flex  w-[340px] mx-auto bg-white p-[3px] justify-around my-5 rounded-lg shadow-[0_2px_10px] shadow-blackA7">
 
-<MenuItem linkName="Home" linkTarget="/"/>
-<MenuItem linkName="About" linkTarget="/#About"/>
-<MenuItem linkName="Projects" linkTarget="/#Projects"/>
-<MenuItem linkName="Experience" linkTarget="/#Experience"/>
+<MenuItem linkName="Home" linkTarget="Main"/>
+<MenuItem linkName="About" linkTarget="About"/>
+<MenuItem linkName="Projects" linkTarget="Projects"/>
+<MenuItem linkName="Experience" linkTarget="Experience"/>
 
       </Menubar.Root>
     </div>
