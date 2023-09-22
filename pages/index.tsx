@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="space-y-12">
+      <main className="space-y-12 mb-[500px]">
         <HeaderSection />
         <AboutSection />
         <ProjectsSection />
@@ -29,7 +29,7 @@ const HeaderSection = () => (
   <section className="space-y-4 ml-4 mt-6">
     <h1 className="text-4xl font-extrabold tracking-tight text-slate-200 sm:text-5xl">Michael Rose</h1>
     <h2 className="text-lg font-semibold tracking-tight text-slate-200 sm:text-xl">Full-Stack Developer in Seattle</h2>
-    <p className="text-base leading-normal sm:text-lg">I build websites</p>
+    <p className="text-base leading-normal sm:text-lg">I build awesome websites</p>
     <SocialMediaLinks />
   </section>
 );
@@ -64,7 +64,7 @@ const AboutSection = () => (
 
 const ProjectsSection = () => (
   <section className="space-y-4">
-    <SectionHeading title="Proj" subtitle="" />
+    <SectionHeading title="Projects" subtitle="" />
     <Card
       heading="RA Journal"
       date="2023"
@@ -112,7 +112,7 @@ const ProjectsSection = () => (
 
 const ExperienceSection = () => (
   <section className="space-y-4">
-    <SectionHeading title="Exp" subtitle="" />
+    <SectionHeading title="Experience" subtitle="" />
     <Card
       heading="General Assembly"
       date="May—Sep 2023"

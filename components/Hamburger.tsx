@@ -10,8 +10,8 @@ const Dropdown = () => {
   const menuItems = [
     { label: 'Home', url: '/' },
     { label: 'About', url: '/#About' },
-    { label: 'Projects', url: '/#Proj' },
-    { label: 'Experience', url: '/#Exp' },
+    { label: 'Projects', url: '/#Projects' },
+    { label: 'Experience', url: '/#Experience' },
   ];
 
   const handleItemClick = (url: string) => {

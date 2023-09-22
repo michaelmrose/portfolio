@@ -16,8 +16,8 @@ const MenubarDemo = () => {
 
 <MenuItem linkName="Home" linkTarget="/"/>
 <MenuItem linkName="About" linkTarget="/#About"/>
-<MenuItem linkName="Projects" linkTarget="/#Proj"/>
-<MenuItem linkName="Experience" linkTarget="/#Exp"/>
+<MenuItem linkName="Projects" linkTarget="/#Projects"/>
+<MenuItem linkName="Experience" linkTarget="/#Experience"/>
 
       </Menubar.Root>
     </div>

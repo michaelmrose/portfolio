@@ -15,7 +15,7 @@ interface CardData {
 
 const Card: React.FC<CardData> = ({ heading, date,description, linkText, linkTarget, children, tags, screenShot }) => {
   return (
-    <div className="mt-5 w-10/12 mx-auto   rounded-lg shadow hover:border-solid hover:border-2 hover:border-teal-300">
+    <div className="mt-5 w-10/12 mx-[100px]  rounded-lg shadow hover:border-solid hover:border-2 hover:border-teal-300">
 
       <div
         className="p-3  rounded-lg md:p-8"
