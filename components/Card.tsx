@@ -59,14 +59,15 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
             </svg>
           </Link>
           : null}
-          <div className="grid grid-cols-4 gap-2 place-items-stretch place-content-center">
-        {tags?.map((tag, idx) => (
-          <span 
-          className="bg-teal-500 rounded-md p-2"
-          key={idx}>
-            {tag}
-          </span>
-        ))}
+        <div className="flex  flex-wrap gap-2 place-items-stretch place-content-center w-[500px]">
+          {tags?.map((tag, idx) => (
+            <span
+              // className="bg-teal-500 rounded-md p-2"
+              className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 "
+              key={idx}>
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
     </div>
