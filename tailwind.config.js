@@ -1,5 +1,5 @@
 const { mauve, violet, red, blackA } = require("@radix-ui/colors");
-const blue = {blue1: "#112340" }
+const blue = {blue1: "#0f172a", blue2: "#233662" }
 
 /** @type {import('tailwindcss').Config} */
 
