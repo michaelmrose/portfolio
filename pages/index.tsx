@@ -27,8 +27,8 @@ export default function Home() {
 }
 const HeaderSection = () => (
   <section className="space-y-4 ml-4 mt-6">
-    <h1 className="text-4xl font-extrabold tracking-tight text-slate-200 sm:text-5xl">Michael Rose</h1>
-    <h2 className="text-lg font-semibold tracking-tight text-slate-200 sm:text-xl">Full-Stack Developer in Seattle</h2>
+    <h1 className="text-5xl font-extrabold tracking-tight text-slate-200">Michael Rose</h1>
+    <h2 className="text-lg font-semibold tracking-tight text-slate-200 ">Full-Stack Developer in Seattle</h2>
     <p className="text-base leading-normal sm:text-lg">I build awesome websites</p>
     <SocialMediaLinks />
   </section>
@@ -51,7 +51,9 @@ const AboutSection = () => (
       date=""
       description=""
       linkText=""
-      linkTarget="">
+      linkTarget=""
+      tags={["JavaScript", "Typescript", "Python", "Clojure"]}>
+  
       <p className="my-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor id diam ultricies mi. Euismod quis viverra nibh cras pulvinar mattis. Mollisio ut enim. Interdum varius sit amet mattis. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Ultricies leo integer malesuada nunc vel risus commodo viverra.
       </p>
@@ -71,7 +73,9 @@ const ProjectsSection = () => (
       description="Your Personal Tracker for Rheumatoid Arthritis Management. Living with RA means navigating a complex landscape of symptoms like pain, stiffness, and fatigue. This app allows you to journal these symptoms alongside life events to identify trends and triggers. By correlating changes such as reduced sleep quality with symptom flare-ups, RA Journal empowers you with insights to better manage your condition. Take control, gain awareness, and step into a healthier tomorrow. Implimented with the MERN stack and the Radix component library
 "
       linkText="Learn more"
-      linkTarget="https://github.com/michaelmrose/rajournal-app">
+      linkTarget="https://github.com/michaelmrose/rajournal-app"
+      tags={["React", "JavaScript", "Express ", "CSS", "MongoDB"]}
+      >
     </Card>
 
     <Card
@@ -80,7 +84,8 @@ const ProjectsSection = () => (
       description="Casheroo is a user-friendly personal finance app with a Postgres/Django backend and a javascript frontend styled with tailwind that centralizes your financial data, integrates multiple accounts, and lets you project your spending and income into the future to make better choices now.
 "
       linkText="Learn more"
-      linkTarget="https://github.com/michaelmrose/casharoo">
+      linkTarget="https://github.com/michaelmrose/casharoo"
+      tags={[ "Python", "Django ", "CSS", "Tailwind", "Chart.js", "Postgres"]}>
     </Card>
 
     <Card
@@ -88,7 +93,8 @@ const ProjectsSection = () => (
       date="2023"
       description="A Javascript Mongo Express App to connect users to the help they need in real time in real spaces."
       linkText="Learn more"
-      linkTarget="https://github.com/michaelmrose/humanhelp">
+      linkTarget="https://github.com/michaelmrose/humanhelp"
+      tags={["JavaScript", "HTML","Express ", "CSS", "MongoDB"]}>
     </Card>
 
 
@@ -97,7 +103,11 @@ const ProjectsSection = () => (
       date="2023"
       description="A glorious call back to Atari games implimented in client side JS and HTML5 Canvas. Cave Invaders sees you heroicly defending your base at the center of a winding cave system from neverending waves ofnefarious alien invadiers. It show cases a good usage of class based inheritence.  "
       linkText="Learn more"
-      linkTarget="https://github.com/michaelmrose/caveInvaders">
+      linkTarget="https://github.com/michaelmrose/caveInvaders"
+      tags={["JavaScript", "HTML", "CSS", "Canvas"]}>
+    
+
+
     </Card>
 
     <Card
@@ -105,7 +115,9 @@ const ProjectsSection = () => (
       date="2023"
       description="A handy cli interface to searching and opening books from your calibre library or recently read titles from your library. Written in clojure and AOT compiled with Oracles innovative GRAAL"
       linkText="Learn more"
-      linkTarget="https://github.com/michaelmrose/rdr">
+      linkTarget="https://github.com/michaelmrose/rdr"
+      tags={["Clojure", "GraalVM" ,"Leiningen"]}
+      >
     </Card>
   </section>
 );
@@ -119,7 +131,9 @@ const ExperienceSection = () => (
       description="Completed 480 hours of expert-led instruction in JavaScript, Python, React, Django, Node.js, and hands-on learning of full stack software development in the industry's most in demand technologies. See portfolio for details.
 "
       linkText=""
-      linkTarget="">
+      linkTarget=""
+      tags={["HTML", "CSS", "JavaScript", "Express ", "React", "Python", "Django", "MongoDB", "Postgres"]}
+      >
     </Card>
 
     <Card
@@ -127,14 +141,18 @@ const ExperienceSection = () => (
       date="2022—2023"
       description="Solving technical challenges one customer at a time."
       linkText=""
-      linkTarget="">
+      linkTarget=""
+      tags={["Technology", "Negotiation", "Empathy", "Communication", "Problem Solving"]}
+      >
     </Card>
     <Card
       heading="Home Depot"
       date="2014—2022"
       description="Leading a team of 12-15"
       linkText=""
-      linkTarget="">
+      linkTarget=""
+      tags={["Leadership", "Training", "Empathy", "Communication"]}
+      >
     </Card>
 
   </section>
