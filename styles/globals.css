@@ -58,3 +58,7 @@ a {
 .sectionHeading {
     background-color: #112340ff!important;
 }
+
+.dense-grid {
+  grid-auto-rows: minmax(100px, auto);
+}

@@ -18,12 +18,24 @@ export default function Home() {
 
       <main className="space-y-12 mb-[500px]">
         <HeaderSection />
-        <div className="grid sm:grid-cols-1 lg:grid-cols-3">
+        {/* <div className="grid dense-grid sm:grid-cols-1  lg:grid-cols-2 xl:grid-cols-3">
 
           <AboutSection />
           <ProjectsSection />
           <ExperienceSection />
-        </div>
+        </div> */}
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+  <div className="lg:col-span-2 xl:col-span-1">
+    <AboutSection />
+  </div>
+  <div className="col-span-1">
+    <ProjectsSection />
+  </div>
+  <div className="col-span-1">
+    <ExperienceSection />
+  </div>
+</div>
+
       </main>
     </>
   );
@@ -47,7 +59,7 @@ const SocialMediaLinks = () => (
 );
 
 const AboutSection = () => (
-  <section className="space-y-4">
+  <section className="space-y-4 flex flex-wrap">
     <SectionHeading title="About" subtitle="" />
     <Card
       heading=""
