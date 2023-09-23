@@ -18,9 +18,12 @@ export default function Home() {
 
       <main className="space-y-12 mb-[500px]">
         <HeaderSection />
-        <AboutSection />
-        <ProjectsSection />
-        <ExperienceSection />
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3">
+
+          <AboutSection />
+          <ProjectsSection />
+          <ExperienceSection />
+        </div>
       </main>
     </>
   );
@@ -35,11 +38,11 @@ const HeaderSection = () => (
 );
 
 const SocialMediaLinks = () => (
-    <ul className=" ml-1 mt-8 flex items-center" aria-label="Social media">
-      <GithubIcon/>
-      <LinkedInIcon/>
-      <MastodonIcon/>
-    </ul>
+  <ul className=" ml-1 mt-8 flex items-center" aria-label="Social media">
+    <GithubIcon />
+    <LinkedInIcon />
+    <MastodonIcon />
+  </ul>
 
 );
 
@@ -53,7 +56,7 @@ const AboutSection = () => (
       linkText=""
       linkTarget=""
       tags={["JavaScript", "Typescript", "Python", "Clojure"]}>
-  
+
       <p className="my-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor id diam ultricies mi. Euismod quis viverra nibh cras pulvinar mattis. Mollisio ut enim. Interdum varius sit amet mattis. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Ultricies leo integer malesuada nunc vel risus commodo viverra.
       </p>
@@ -75,7 +78,7 @@ const ProjectsSection = () => (
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/rajournal-app"
       tags={["React", "JavaScript", "Express ", "CSS", "MongoDB"]}
-      >
+    >
     </Card>
 
     <Card
@@ -85,7 +88,7 @@ const ProjectsSection = () => (
 "
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/casharoo"
-      tags={[ "Python", "Django ", "CSS", "Tailwind", "Chart.js", "Postgres"]}>
+      tags={["Python", "Django ", "CSS", "Tailwind", "Chart.js", "Postgres"]}>
     </Card>
 
     <Card
@@ -94,7 +97,7 @@ const ProjectsSection = () => (
       description="A Javascript Mongo Express App to connect users to the help they need in real time in real spaces."
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/humanhelp"
-      tags={["JavaScript", "HTML","Express ", "CSS", "MongoDB"]}>
+      tags={["JavaScript", "HTML", "Express ", "CSS", "MongoDB"]}>
     </Card>
 
 
@@ -105,7 +108,7 @@ const ProjectsSection = () => (
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/caveInvaders"
       tags={["JavaScript", "HTML", "CSS", "Canvas"]}>
-    
+
 
 
     </Card>
@@ -116,8 +119,8 @@ const ProjectsSection = () => (
       description="A handy cli interface to searching and opening books from your calibre library or recently read titles from your library. Written in clojure and AOT compiled with Oracles innovative GRAAL"
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/rdr"
-      tags={["Clojure", "GraalVM" ,"Leiningen"]}
-      >
+      tags={["Clojure", "GraalVM", "Leiningen"]}
+    >
     </Card>
   </section>
 );
@@ -133,7 +136,7 @@ const ExperienceSection = () => (
       linkText=""
       linkTarget=""
       tags={["HTML", "CSS", "JavaScript", "Express ", "React", "Python", "Django", "MongoDB", "Postgres"]}
-      >
+    >
     </Card>
 
     <Card
@@ -143,7 +146,7 @@ const ExperienceSection = () => (
       linkText=""
       linkTarget=""
       tags={["Technology", "Negotiation", "Empathy", "Communication", "Problem Solving"]}
-      >
+    >
     </Card>
     <Card
       heading="Home Depot"
@@ -152,7 +155,7 @@ const ExperienceSection = () => (
       linkText=""
       linkTarget=""
       tags={["Leadership", "Training", "Empathy", "Communication"]}
-      >
+    >
     </Card>
 
   </section>
