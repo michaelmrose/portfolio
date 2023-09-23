@@ -43,7 +43,7 @@ const Dropdown = () => {
             <DropdownMenu.Item
               key={item.url}
               onSelect={() => handleItemClick(item.url)}
-              className="group transition duration-300 ease-in-out text-[40px] my-6  leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
+              className="group transition duration-300 ease-in-out text-[30px] my-4  leading-none text-violet11 rounded-[3px] flex items-center h-[25px] px-[5px] relative pl-[25px] select-none outline-none data-[disabled]:text-mauve8 data-[disabled]:pointer-events-none data-[highlighted]:bg-violet9 data-[highlighted]:text-violet1"
             >
               {item.label}
             </DropdownMenu.Item>

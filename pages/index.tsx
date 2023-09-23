@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styled, { css } from 'styled-components';
 import SectionHeading from "../components/SectionHeading";
 import Card from "../components/Card";
 import GithubIcon from "@/components/icons/GithubIcon";
@@ -18,23 +17,17 @@ export default function Home() {
 
       <main className="space-y-12 mb-[500px]">
         <HeaderSection />
-        {/* <div className="grid dense-grid sm:grid-cols-1  lg:grid-cols-2 xl:grid-cols-3">
-
-          <AboutSection />
-          <ProjectsSection />
-          <ExperienceSection />
-        </div> */}
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-  <div className="lg:col-span-2 xl:col-span-1">
-    <AboutSection />
-  </div>
-  <div className="col-span-1">
-    <ProjectsSection />
-  </div>
-  <div className="col-span-1">
-    <ExperienceSection />
-  </div>
-</div>
+          <div className="lg:col-span-2 xl:col-span-1">
+            <AboutSection />
+          </div>
+          <div className="col-span-1">
+            <ProjectsSection />
+          </div>
+          <div className="col-span-1">
+            <ExperienceSection />
+          </div>
+        </div>
 
       </main>
     </>
