@@ -8,7 +8,7 @@ interface SectionHeaderData {
 
 export default function SectionHeader({ title, subtitle }: SectionHeaderData) {
   return (
-    <div className="mt-6 ml-3 mx-auto sticky top-0 z-10 w-full  relative">
+    <div className="mt-6 ml-3 mx-auto sticky top-6 z-10 w-full  relative">
       <h1 className="dark:text-white mt-4 text-black text-sm font-medium absolute left-0 right- 0 mb-14" id={title}>
         {title}
       </h1>
