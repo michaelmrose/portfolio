@@ -18,10 +18,10 @@ interface CardData {
 
 const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTarget, children, tags, screenShot }) => {
   const [isFlipped, setIsFlipped] = useState(false)
- const cardFrontRef = useRef<HTMLDivElement>(null); // Specify the type here
+  const cardFrontRef = useRef<HTMLDivElement>(null); // Specify the type here
   const [cardHeight, setCardHeight] = useState<number>(0); // To store the height
- 
-   useEffect(() => {
+
+  useEffect(() => {
     // Measure and set the height once CardFront is mounted
     if (cardFrontRef.current) {
       const height = cardFrontRef.current.offsetHeight;
@@ -33,17 +33,36 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
     e.preventDefault()
     e.stopPropagation()
     if (screenShot)
-    setIsFlipped(prevIsFlipped => !prevIsFlipped)
+      setIsFlipped(prevIsFlipped => !prevIsFlipped)
   };
 
   function CardFront(props: any) {
-    return (
-      <div onClick={handleFlip} className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
 
-            {screenShot && 
-            <Button onClick={handleFlip} className="self-end mt-3 mr-3">
-              Flip me to see more
-              </Button>}
+    const [touchStartX, setTouchStartX] = useState(0);
+    const [touchEndX, setTouchEndX] = useState(0);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+      setTouchStartX(e.changedTouches[0].screenX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+      setTouchEndX(e.changedTouches[0].screenX);
+    };
+
+    const handleTouchEnd = () => {
+      // Logic to detect a sufficient "drag" to flip the card
+      if (screenShot && Math.abs(touchEndX - touchStartX) > 300) { // 100 is a threshold, adjust as needed
+        setIsFlipped(prevIsFlipped => !prevIsFlipped);
+      }
+    };
+    return (
+      <div onClick={handleFlip}
+        className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
+
+        {screenShot &&
+          <Button onClick={handleFlip} className="self-end mt-3 mr-3">
+            Flip me to see more
+          </Button>}
 
         <div
           className="p-3  rounded-lg md:p-8 "
@@ -104,13 +123,33 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
   }
 
   function CardBack(props: any) {
-    return (
-      <div onClick={handleFlip} className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
 
-            {screenShot && 
-            <Button onClick={handleFlip} className="self-end mt-3 mr-3">
-              Flip me to see more
-              </Button>}
+    const [touchStartX, setTouchStartX] = useState(0);
+    const [touchEndX, setTouchEndX] = useState(0);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+      setTouchStartX(e.changedTouches[0].screenX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+      setTouchEndX(e.changedTouches[0].screenX);
+    };
+
+    const handleTouchEnd = () => {
+      // Logic to detect a sufficient "drag" to flip the card
+      if (screenShot && Math.abs(touchEndX - touchStartX) > 300) {
+        setIsFlipped(prevIsFlipped => !prevIsFlipped);
+      }
+    };
+    return (
+      <div
+        onClick={handleFlip}
+        className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
+
+        {screenShot &&
+          <Button onClick={handleFlip} className="self-end mt-3 mr-3">
+            Flip me to see more
+          </Button>}
 
         <div
           className="p-3  rounded-lg md:p-8"
@@ -128,7 +167,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
 
 
-          <Image className="my-6" alt="screenshot" width={1024} height={600} src={screenShot!}/>
+          <Image className="my-6" alt="screenshot" width={1024} height={600} src={screenShot!} />
           <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
           </div>
           {linkTarget &&
@@ -170,7 +209,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
   }
 
   return (
-<ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <div ref={cardFrontRef}>  {/* Setting the ref here */}
         <CardFront /* other props */ />
       </div>
