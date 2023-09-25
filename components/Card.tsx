@@ -114,7 +114,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
 
 
-          <img src={"zelda.jpg"} />
+          <img src={screenShot}/>
           <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
           </div>
           {linkTarget &&
