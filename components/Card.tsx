@@ -42,7 +42,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
             {screenShot && 
             <Button onClick={handleFlip} className="self-end mt-3 mr-3">
-              Flip it
+              Flip me to see more
               </Button>}
 
         <div
@@ -109,7 +109,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
             {screenShot && 
             <Button onClick={handleFlip} className="self-end mt-3 mr-3">
-              Flip it
+              Flip me to see more
               </Button>}
 
         <div

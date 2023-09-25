@@ -63,10 +63,10 @@ const AboutSection = () => (
       tags={["JavaScript", "Typescript", "Python", "Clojure"]}>
 
       <p className="my-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor id diam ultricies mi. Euismod quis viverra nibh cras pulvinar mattis. Mollisio ut enim. Interdum varius sit amet mattis. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Ultricies leo integer malesuada nunc vel risus commodo viverra.
+{"I'm a software engineer based in Seattle, Washington. I am skilled in languages such as JavaScript, Python and Clojure, and have worked with frameworks like React  and Django. \
+ I received formal training at General Assembly and Trident Technical College. Before moving into software development, I gained valuable experience in leadership roles, primarily in customer service. My goals are continuous learning and making a meaningful impact in my field."}
       </p>
       <p className="my-3">
-        Rhoncus dolor purus non enim praesent elementum facilisis. Enim nulla aliquet porttitor ultricies tristique nulla aliquet enim tortor. In massa tempor nec feugiat nisl pretium fusce. Dolor sed viverra ipsum nunc aliquet bibendum. Pulvinar neque laoreet suspendisse interdum.
       </p>
     </Card>
   </section>
