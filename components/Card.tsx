@@ -167,7 +167,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
 
 
-          <Image className="my-6" alt="screenshot" width={1024} height={600} src={screenShot!} />
+          <Image unoptimized className="my-6" alt="screenshot" width={1024} height={600} src={screenShot!} />
           <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
           </div>
           {linkTarget &&
