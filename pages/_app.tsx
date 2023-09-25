@@ -4,9 +4,12 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import Header from "../components/Header";
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
 export default function App({ Component, pageProps }: AppProps) {
 
   return (
+    <Theme>
     <ThemeProvider
       disableTransitionOnChange
       attribute="class"
@@ -19,5 +22,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
       <Component {...pageProps} />
     </ThemeProvider>
+</Theme>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ReactNode, useState, useEffect, useRef } from "react";
 import ReactCardFlip from 'react-card-flip'
+import { Flex, Text, Button } from '@radix-ui/themes';
 
 interface CardData {
   heading: string
@@ -38,9 +39,9 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
       <div className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
 
             {screenShot && 
-            <button onClick={handleFlip} className="self-end mt-3 mr-3">
+            <Button onClick={handleFlip} className="self-end mt-3 mr-3">
               Flip it
-              </button>}
+              </Button>}
 
         <div
           className="p-3  rounded-lg md:p-8 "
@@ -105,9 +106,9 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
       <div className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
 
             {screenShot && 
-            <button onClick={handleFlip} className="self-end mt-3 mr-3">
+            <Button onClick={handleFlip} className="self-end mt-3 mr-3">
               Flip it
-              </button>}
+              </Button>}
 
         <div
           className="p-3  rounded-lg md:p-8"
