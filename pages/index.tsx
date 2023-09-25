@@ -82,7 +82,7 @@ const ProjectsSection = () => (
 "
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/rajournal-app"
-      screenShot="zelda.jpg"
+      screenShot="/zelda.jpg"
       tags={["React", "JavaScript", "Express ", "CSS", "MongoDB"]}
     >
     </Card>

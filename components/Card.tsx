@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ReactNode, useState } from "react";
 import ReactCardFlip from 'react-card-flip'
 
@@ -114,7 +115,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
 
 
-          <img src={screenShot}/>
+          <Image className="my-6" alt="screenshot" width={1024} height={600} src={screenShot!}/>
           <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
           </div>
           {linkTarget &&
@@ -149,6 +150,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
             ))}
           </div>
         </div>
+
       </div>
 
     )
