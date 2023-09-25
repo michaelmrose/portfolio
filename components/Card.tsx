@@ -30,13 +30,15 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
   }, []);
 
   const handleFlip = (e: any) => {
-    e.preventDefault();
-    setIsFlipped(prevIsFlipped => !prevIsFlipped);
+    e.preventDefault()
+    e.stopPropagation()
+    if (screenShot)
+    setIsFlipped(prevIsFlipped => !prevIsFlipped)
   };
 
   function CardFront(props: any) {
     return (
-      <div className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
+      <div onClick={handleFlip} className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
 
             {screenShot && 
             <Button onClick={handleFlip} className="self-end mt-3 mr-3">
@@ -61,7 +63,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
           <div>
             {children || null}
           </div>
-          <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
+          <div className="mb-3 text-gray-500 dark:text-slate-200 text-lg">
             {description}
           </div>
           {linkTarget &&
@@ -103,7 +105,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
   function CardBack(props: any) {
     return (
-      <div className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
+      <div onClick={handleFlip} className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
 
             {screenShot && 
             <Button onClick={handleFlip} className="self-end mt-3 mr-3">
