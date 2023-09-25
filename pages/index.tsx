@@ -82,7 +82,7 @@ const ProjectsSection = () => (
 "
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/rajournal-app"
-      screenShot="/zelda.jpg"
+      screenShot="/rajournal.jpg"
       tags={["React", "JavaScript", "Express ", "CSS", "MongoDB"]}
     >
     </Card>
@@ -94,6 +94,7 @@ const ProjectsSection = () => (
 "
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/casharoo"
+      screenShot="/casharoo.jpg"
       tags={["Python", "Django ", "CSS", "Tailwind", "Chart.js", "Postgres"]}>
     </Card>
 
@@ -103,6 +104,7 @@ const ProjectsSection = () => (
       description="A Javascript Mongo Express App to connect users to the help they need in real time in real spaces."
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/humanhelp"
+      screenShot="/humanhelp.jpg"
       tags={["JavaScript", "HTML", "Express ", "CSS", "MongoDB"]}>
     </Card>
 
@@ -113,6 +115,7 @@ const ProjectsSection = () => (
       description="A glorious call back to Atari games implimented in client side JS and HTML5 Canvas. Cave Invaders sees you heroicly defending your base at the center of a winding cave system from neverending waves ofnefarious alien invadiers. It show cases a good usage of class based inheritence.  "
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/caveInvaders"
+      screenShot="/caveinvaders.jpg"
       tags={["JavaScript", "HTML", "CSS", "Canvas"]}>
 
 
@@ -125,6 +128,7 @@ const ProjectsSection = () => (
       description="A handy cli interface to searching and opening books from your calibre library or recently read titles from your library. Written in clojure and AOT compiled with Oracles innovative GRAAL"
       linkText="Learn more"
       linkTarget="https://github.com/michaelmrose/rdr"
+      screenShot="/rdr.jpg"
       tags={["Clojure", "GraalVM", "Leiningen"]}
     >
     </Card>
