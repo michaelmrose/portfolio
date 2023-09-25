@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect, useRef } from "react";
 import ReactCardFlip from 'react-card-flip'
 
 interface CardData {
@@ -17,6 +17,16 @@ interface CardData {
 
 const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTarget, children, tags, screenShot }) => {
   const [isFlipped, setIsFlipped] = useState(false)
+ const cardFrontRef = useRef<HTMLDivElement>(null); // Specify the type here
+  const [cardHeight, setCardHeight] = useState<number>(0); // To store the height
+ 
+   useEffect(() => {
+    // Measure and set the height once CardFront is mounted
+    if (cardFrontRef.current) {
+      const height = cardFrontRef.current.offsetHeight;
+      setCardHeight(height);
+    }
+  }, []);
 
   const handleFlip = (e: any) => {
     e.preventDefault();
@@ -157,11 +167,14 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
   }
 
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-        <CardFront />
-        <CardBack />
+<ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+      <div ref={cardFrontRef}>  {/* Setting the ref here */}
+        <CardFront /* other props */ />
+      </div>
+      <div style={{ minHeight: `${cardHeight}px` }}>  {/* Using cardHeight here */}
+        <CardBack /* other props */ />
+      </div>
     </ReactCardFlip>
-
   );
 };
 
