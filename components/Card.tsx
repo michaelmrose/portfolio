@@ -144,7 +144,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
     return (
       <div
         onClick={handleFlip}
-        className="bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
+        className=" bg-transparent hover:bg-blue4  mt-5  ml-[100px] mr-3 rounded-lg shadow hover:border-solid hover:border-1 hover:border-white-300 max-w-[600px] flex flex-col">
 
         {screenShot &&
           <Button onClick={handleFlip} className="self-end mt-3 mr-3">
@@ -167,7 +167,7 @@ const Card: React.FC<CardData> = ({ heading, date, description, linkText, linkTa
 
 
 
-          <Image unoptimized className="my-6" alt="screenshot" width={1024} height={600} src={screenShot!} />
+          <Image unoptimized className="my-6" alt="screenshot" width={500} height={500} src={screenShot!} />
           <div className="mb-3 text-gray-500 dark:text-slate-200 text-sm">
           </div>
           {linkTarget &&

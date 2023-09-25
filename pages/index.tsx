@@ -60,6 +60,7 @@ const AboutSection = () => (
       description=""
       linkText=""
       linkTarget=""
+      screenShot="/me.jpg"
       tags={["JavaScript", "Typescript", "Python", "Clojure"]}>
 
       <p className="my-3">
