@@ -62,17 +62,3 @@ a {
 .dense-grid {
   grid-auto-rows: minmax(100px, auto);
 }
-.card-container {
-  perspective: 1000px;
-}
-
-.card {
-  transform-style: preserve-3d;
-}
-
-.front-side,
-.back-side {
-  backface-visibility: hidden;
-  position: absolute;
-}
-
