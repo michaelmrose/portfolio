@@ -12,6 +12,7 @@ const Dropdown = () => {
     { label: 'About', url: '/#About' },
     { label: 'Projects', url: '/#Projects' },
     { label: 'Experience', url: '/#Experience' },
+    { label: 'Resume', url: '/resume.pdf' },
   ];
 
   const handleItemClick = (url: string) => {
